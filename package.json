@@ -1,8 +1,7 @@
 {
-  "name": "my-app",
+  "name": "samurai",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nickolayarbuzov.github.io/samurai"
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
