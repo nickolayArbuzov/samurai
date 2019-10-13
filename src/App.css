@@ -9,23 +9,7 @@
   margin: 0 auto;
 }
 
-.header{
-  grid-area: h;
-  background-color: darkslategrey;
-}
-.header img{
-  width: 50px;
-}
 
-.nav{
-  grid-area: n;
-  background-color: cadetblue;
-}
 
-.content{
-  grid-area: c;
-  background-color: darkgray;
-}
-.content img{
-  width:100%;
-}
+
+
