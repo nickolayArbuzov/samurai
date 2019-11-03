@@ -3,10 +3,11 @@
   background-color: #87806c;
 }
 
-.item{
+.item a{
   color:white;
+  text-decoration: none;
 }
 
-.active{
+.item a.activeLink{
   color:yellow;
 }
