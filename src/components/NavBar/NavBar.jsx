@@ -7,13 +7,16 @@ const NavBar = () => {
       <a href="/Profile">Profile</a>
     </div>
     <div className={`${s.item} ${s.active}`}>
-      <a href="/Dialogs">Messges</a>
+      <a href="/Dialogs">Messages</a>
     </div>
     <div className={s.item}>
-      <a>News</a>
+      <a href="/News">News</a>
     </div>
     <div className={s.item}>
-      <a>Feed</a>
+      <a href="/Music">Music</a>
+    </div>
+    <div className={s.item}>
+      <a href="/Settings">Settings</a>
     </div>
   </nav>
 }
