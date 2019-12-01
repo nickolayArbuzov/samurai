@@ -5,13 +5,8 @@ import DialogItem from './DialogItem/DialogItem';
 
 
 const Dialogs = (props) => {
-    let dialogsData = [
-        {id:1,name:'Kolya'},
-        {id:2,name:'Ujin'},
-        {id:3,name:'Ira'},
-        {id:4,name:'Maria'}
-    ]
-    let dialogElements = dialogsData
+    
+    let dialogElements = props.dialogsData
         .map(d => <DialogItem name={d.name} id={d.id} />);
     
     let messagesData = [
