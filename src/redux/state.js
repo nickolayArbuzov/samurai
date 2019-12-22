@@ -24,7 +24,7 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) = > {
+export let addPost = (postMessage) => {
     let newPost = {
         id: 7,
         message: postMessage,
