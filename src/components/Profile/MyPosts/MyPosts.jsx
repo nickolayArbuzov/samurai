@@ -7,14 +7,13 @@ const MyPosts = (props) => {
   let postElements = props.posts.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
   let newPostElement = React.createRef();
   let addPost = ()=>{
-    let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value ='';
+    props.addPost();
+    props.updateNewPostText('');
   }
 
     let onPostChange = () => {
       let text = newPostElement.current.value;
-      alert(text);
+      props.updateNewPostText(text);
     }
 
     return <div className={s.posts}>
