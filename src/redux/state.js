@@ -36,6 +36,7 @@ export let addPost = () => {
         likeCount: 1
     }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText ='';
     renderEntireTree(state);
 }
 
