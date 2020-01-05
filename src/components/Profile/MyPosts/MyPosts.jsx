@@ -13,7 +13,8 @@ const MyPosts = (props) => {
   }
 
     let onPostChange = () => {
-
+      let text = newPostElement.current.value;
+      alert(text);
     }
 
     return <div className={s.posts}>
