@@ -1,4 +1,4 @@
-import state from './redux/state';
+import state, { subscribe } from './redux/state';
 import * as serviceWorker from './serviceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,8 +15,9 @@ let renderEntireTree = (state) =>{
                 document.getElementById('root'));
 }
 
-
 renderEntireTree(state);
+
+subscribe(renderEntireTree);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
