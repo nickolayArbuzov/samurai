@@ -7,7 +7,7 @@ import App from './App';
 import {addPost} from './redux/state';
 import {updateNewPostText} from './redux/state';
 
-let renderEntireTree = (state) =>{
+let renderEntireTree = (state) => {
 
     ReactDOM.render(<App state={state} 
                 addPost={addPost}

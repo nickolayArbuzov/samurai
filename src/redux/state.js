@@ -49,7 +49,8 @@ export const updateNewPostText = (newText) => {
 };
 
 export const subscribe = (observer) => {
-
+    renderEntireTree = observer;
 }
 
 export default state;
+
