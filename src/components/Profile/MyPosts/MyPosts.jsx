@@ -8,7 +8,7 @@ let addPostActionCreator = () => {
   }
 }
 
-let updateNewPostTextActionCreator = () => {
+let updateNewPostTextActionCreator = (text) => {
   return {
     type: 'UPDATE-NEW-POST-TEXT', 
     newText: text
