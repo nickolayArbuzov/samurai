@@ -10,27 +10,24 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 
-const App = (props) => {
-
+const App = () => {
   return ( 
-    <BrowserRouter>
       <div className='app-wrapper'>
         <Header/>
         <NavBar/>
         <div className='app-wrapper-content'>
 
           <Route path='/Profile' 
-          render={ () => <Profile store = {props.store}/> }/>
+          render={ () => <Profile /> }/>
 
           <Route path='/Dialogs' 
-          render={ () => <DialogsContainer store={props.store}/> }/>
+          render={ () => <DialogsContainer /> }/>
 
           <Route path='/News' component={News}/>
           <Route path='/Music' component={Music}/>
           <Route path='/Settings' component={Settings}/>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 
