@@ -5,7 +5,7 @@ const ProfileInfo = () => {
     return (
     <div>
       <div>
-        <img src='https://imgcomfort.com/Userfiles/Upload/images/illustration-geiranger.jpg'/>
+        <img src='https://darsik.com/wp-content/uploads/2020/06/IMG_6700-1024x682.jpg'/>
       </div>
       <div className={s.descriptionBlock}>
           ava + description

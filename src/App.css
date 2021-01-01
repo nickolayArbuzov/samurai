@@ -4,8 +4,8 @@
   "h h"
   "c n";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 10fr 2fr;
-  width: 1200px;
+  grid-template-columns: 10fr 1fr;
+  width: 1126px;
   margin: 0 auto;
 }
 
