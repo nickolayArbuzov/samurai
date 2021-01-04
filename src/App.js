@@ -4,8 +4,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
+import UsersContainer from './components/Users/UsersContainer';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
@@ -19,6 +19,9 @@ const App = () => {
 
           <Route path='/Profile' 
           render={ () => <Profile /> }/>
+
+          <Route path='/Users' 
+          render={ () => <UsersContainer /> }/>
 
           <Route path='/Dialogs' 
           render={ () => <DialogsContainer /> }/>
