@@ -5,3 +5,7 @@
 .selectedPage{
   font-weight: bold;
 }
+
+.preLoader{
+  width: 100px;
+}
