@@ -1,3 +1,15 @@
 .descriptionBlock{
     padding:10px;
 }
+
+.job{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}
+
+.unJob{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}

@@ -7,15 +7,16 @@ const ProfileInfo = (props) => {
     if(!props.profile){
       return <Preloader/>
     }
-    debugger;
     return (
     <div>
       <div>
         <img src='https://darsik.com/wp-content/uploads/2020/06/IMG_6700-1024x682.jpg'/>
       </div>
       <div className={s.descriptionBlock}>
-          <img src={props.profile.photos.large}/>
-          ava + description
+          {props.profile.profile.photos.large ? <img src={props.profile.profile.photos.large}/> : 'Нет фото'}
+          <div>{props.profile.profile.fullName}</div>
+          Открыт для преложений: <div className={props.profile.profile.lookingForAJob ? s.job : s.unJob}></div>
+          <div>{props.profile.profile.lookingForAJobDescription}</div>
       </div>
     </div>
     )
