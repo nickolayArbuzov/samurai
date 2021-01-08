@@ -3,7 +3,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-import Profile from './components/Profile/Profile';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import News from './components/News/News';
 import UsersContainer from './components/Users/UsersContainer';
 import Music from './components/Music/Music';
@@ -18,7 +18,7 @@ const App = () => {
         <div className='app-wrapper-content'>
 
           <Route path='/Profile' 
-          render={ () => <Profile /> }/>
+          render={ () => <ProfileContainer /> }/>
 
           <Route path='/Users' 
           render={ () => <UsersContainer /> }/>

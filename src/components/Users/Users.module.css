@@ -6,6 +6,11 @@
   font-weight: bold;
 }
 
-.preLoader{
-  width: 100px;
+.pagination{
+  color: gray;
+  cursor: pointer;
+} 
+
+.pagination:hover{
+  color: black;
 }
