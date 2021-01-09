@@ -2,6 +2,10 @@
     grid-area: h;
     background-color:#383428;
   }
-  .header img{
-    width: 60px;
-  }
+.header img{
+  width: 60px;
+}
+.loginBlock{
+  float: right;
+}
+

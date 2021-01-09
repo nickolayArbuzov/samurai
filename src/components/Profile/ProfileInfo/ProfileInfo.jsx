@@ -15,7 +15,7 @@ const ProfileInfo = (props) => {
       <div className={s.descriptionBlock}>
           {props.profile.profile.photos.large ? <img src={props.profile.profile.photos.large}/> : 'Нет фото'}
           <div>{props.profile.profile.fullName}</div>
-          Открыт для преложений: <div className={props.profile.profile.lookingForAJob ? s.job : s.unJob}></div>
+          Открыт для предложений: <div className={props.profile.profile.lookingForAJob ? s.job : s.unJob}></div>
           <div>{props.profile.profile.lookingForAJobDescription}</div>
       </div>
     </div>
