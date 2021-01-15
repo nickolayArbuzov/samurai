@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
           <div>{props.profile.profile.fullName}</div>
           Открыт для предложений: <div className={props.profile.profile.lookingForAJob ? s.job : s.unJob}></div>
           <div>{props.profile.profile.lookingForAJobDescription}</div>
-          <ProfileStatus status={'Hello im here'}/>
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
     )

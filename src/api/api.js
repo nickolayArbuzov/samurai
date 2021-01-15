@@ -23,20 +23,27 @@ export const authAPI = {
 }
 
 export const followAPI = {
-    follow(userID){
-        return instance.post(`follow/${userID}`)
+    follow(userId){
+        return instance.post(`follow/${userId}`)
             .then(response => response.data);
     },
-    unfollow(userID){
-        return instance.delete(`follow/${userID}`)
+    unfollow(userId){
+        return instance.delete(`follow/${userId}`)
             .then(response => response.data);
     }
 }
 
 export const profileAPI = {
-    getProfile(userID){
-        return instance.get(`profile/${userID}`)
+    getProfile(userId){
+        return instance.get(`profile/${userId}`)
             .then(response => response.data);
+    },
+    getStatus(userId){
+        return instance.get(`profile/status/${userId}`)
+            .then(response => response.data);
+    },
+    updateStatus(status){
+        return instance.put(`profile/status`, {status: status})
     }
 }
                                 
