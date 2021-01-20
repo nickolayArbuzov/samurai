@@ -9,6 +9,8 @@
 .pagination{
   color: gray;
   cursor: pointer;
+  transition-property: color;
+  transition-duration: 0.5s;
 } 
 
 .pagination:hover{

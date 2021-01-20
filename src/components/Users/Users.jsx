@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Users.module.css';
 import userPhoto from '../../assets/images/1200px-Smiley.svg.png';
 import { NavLink } from 'react-router-dom';
-import { followAPI } from '../../api/api';
 
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -14,7 +13,7 @@ let Users = (props) => {
     return <div>
             <div>
                 {pages.map(p => {
-                    return <span className={(props.currentPage === p && s.selectedPage) || s.pagination}
+                    return <span className={(props.Page === p && s.selectedPage) || s.pagination}
                         onClick={() => {props.onPageChanged(p)}}>{p} </span>
                 })}
             </div>
