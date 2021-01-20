@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import './App.css';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavBar from './components/NavBar/NavBar';
@@ -10,9 +10,23 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import Login from './components/Login/Login';
+import { initializeApp } from './redux/appReducer';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import Preloader from './components/Common/Preloader/Preloader'
 
-const App = () => {
-  return ( 
+class App extends React.Component {
+
+  componentDidMount(){
+    this.props.initializeApp();
+  }
+
+  render (){
+    if (!this.props.initialized) {
+      return <Preloader/>
+    }
+
+    return ( 
       <div className='app-wrapper'>
         <HeaderContainer />
         <NavBar/>
@@ -34,7 +48,14 @@ const App = () => {
           <Route path='/Settings' component={Settings}/>
         </div>
       </div>
-  );
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  initialized: state.app.initialized
+})
+ 
+export default compose(
+  withRouter, 
+  connect(mapStateToProps, {initializeApp}))(App);
