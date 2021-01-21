@@ -1,7 +1,7 @@
 import React from 'react';
 import Preloader from '../../Common/Preloader/Preloader';
 import s from './ProfileInfo.module.css';
-import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
 
@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
           <div>{props.profile.profile.fullName}</div>
           Открыт для предложений: <div className={props.profile.profile.lookingForAJob ? s.job : s.unJob}></div>
           <div>{props.profile.profile.lookingForAJobDescription}</div>
-          <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+          <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
     )
