@@ -10,7 +10,6 @@ const maxLength10 = maxLengthCreator(10)
 const MyPosts = (props) => {
 
   let postElements = props.posts.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
-  let newPostElement = React.createRef();
   let onAddPost = (values) => {
     props.addPost(values.newPostText);
   }
