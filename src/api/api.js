@@ -53,6 +53,7 @@ export const profileAPI = {
             .then(response => response.data);
     },
     updateStatus(status){
+        debugger
         return instance.put(`profile/status/`, {status: status})
     }
 }

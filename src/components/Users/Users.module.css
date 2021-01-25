@@ -2,17 +2,3 @@
   width: 60px;
 }
 
-.selectedPage{
-  font-weight: bold;
-}
-
-.pagination{
-  color: gray;
-  cursor: pointer;
-  transition-property: color;
-  transition-duration: 0.5s;
-} 
-
-.pagination:hover{
-  color: black;
-}
