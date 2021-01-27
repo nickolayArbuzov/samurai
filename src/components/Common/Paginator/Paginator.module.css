@@ -1,14 +1,22 @@
-.selectedPage{
-    font-weight: bold;
+.paginator{
+    margin: 10px;
 }
 
-.pagination{
+.pageNumber{
+    padding: 2px;
     color: gray;
+    border: 1px solid black;
     cursor: pointer;
-    transition-property: color;
+    transition-property: color, border;
     transition-duration: 0.5s;
 } 
 
-.pagination:hover{
+.pageNumber:hover{
     color: black;
+    border: 1px solid gray;
+}
+
+.pageNumber.selectedPage{
+    font-weight: bold;
+    border: 1px solid gray;
 }
