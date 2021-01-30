@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/samurai/static/css/main.10722442.chunk.css",
+    "main.js": "/samurai/static/js/main.d137d21b.chunk.js",
+    "main.js.map": "/samurai/static/js/main.d137d21b.chunk.js.map",
+    "runtime-main.js": "/samurai/static/js/runtime-main.97ce3da0.js",
+    "runtime-main.js.map": "/samurai/static/js/runtime-main.97ce3da0.js.map",
+    "static/js/2.a8453798.chunk.js": "/samurai/static/js/2.a8453798.chunk.js",
+    "static/js/2.a8453798.chunk.js.map": "/samurai/static/js/2.a8453798.chunk.js.map",
+    "static/css/3.77f12e8a.chunk.css": "/samurai/static/css/3.77f12e8a.chunk.css",
+    "static/js/3.8d8eaea8.chunk.js": "/samurai/static/js/3.8d8eaea8.chunk.js",
+    "static/js/3.8d8eaea8.chunk.js.map": "/samurai/static/js/3.8d8eaea8.chunk.js.map",
+    "static/css/4.78a9075e.chunk.css": "/samurai/static/css/4.78a9075e.chunk.css",
+    "static/js/4.fac23877.chunk.js": "/samurai/static/js/4.fac23877.chunk.js",
+    "static/js/4.fac23877.chunk.js.map": "/samurai/static/js/4.fac23877.chunk.js.map",
+    "static/css/5.7d292bda.chunk.css": "/samurai/static/css/5.7d292bda.chunk.css",
+    "static/js/5.27c5dd7e.chunk.js": "/samurai/static/js/5.27c5dd7e.chunk.js",
+    "static/js/5.27c5dd7e.chunk.js.map": "/samurai/static/js/5.27c5dd7e.chunk.js.map",
+    "index.html": "/samurai/index.html",
+    "precache-manifest.9952e640a02fa3be04127fe5c8f45ebf.js": "/samurai/precache-manifest.9952e640a02fa3be04127fe5c8f45ebf.js",
+    "service-worker.js": "/samurai/service-worker.js",
+    "static/css/3.77f12e8a.chunk.css.map": "/samurai/static/css/3.77f12e8a.chunk.css.map",
+    "static/css/4.78a9075e.chunk.css.map": "/samurai/static/css/4.78a9075e.chunk.css.map",
+    "static/css/5.7d292bda.chunk.css.map": "/samurai/static/css/5.7d292bda.chunk.css.map",
+    "static/css/main.10722442.chunk.css.map": "/samurai/static/css/main.10722442.chunk.css.map",
+    "static/media/1200px-Smiley.svg.png": "/samurai/static/media/1200px-Smiley.svg.f5b65636.png",
+    "static/media/7677edd5a44b10130b8824ca020ba60b.gif": "/samurai/static/media/7677edd5a44b10130b8824ca020ba60b.1a7925ff.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97ce3da0.js",
+    "static/js/2.a8453798.chunk.js",
+    "static/css/main.10722442.chunk.css",
+    "static/js/main.d137d21b.chunk.js"
+  ]
+}
