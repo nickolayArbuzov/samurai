@@ -21,13 +21,39 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
       <div className={s.descriptionBlock}>
           <img src={profile.profile.photos.large || userPhoto } className={s.mainPhoto}/>
           { isOwner && <input type={'file'} onChange={onMainPhotoSelected}/> }
-          <div>{profile.profile.fullName}</div>
-          Открыт для предложений: <div className={profile.profile.lookingForAJob ? s.job : s.unJob}></div>
-          <div>{profile.profile.lookingForAJobDescription}</div>
+          
+          <ProfileData profile={profile}/>
           <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
       </div>
     </div>
     )
+}
+
+const ProfileData = (profile) => {
+  return <div>
+          <div>
+            <b>Full Name: </b> {profile.profile.fullName}
+          </div>
+
+          <div>
+            <b>Looking for a job: </b> <div className={profile.profile.lookingForAJob ? s.job : s.unJob}></div>
+          </div> 
+
+          {
+          profile.profile.lookingForAJobDescription &&
+            <div>My Professional Skills: {profile.profile.lookingForAJobDescription}</div> 
+          }
+
+          <div>
+            <b>Contacts: </b> {Object.keys(profile.profile.contacts).map(key => {
+              return <Contact key={key} contactTitle={key} contactValue={profile.profile.contacts[key]}/>
+            })}
+          </div>
+        </div>
+}
+
+const Contact = ({contactTitle, contactValue}) => {
+  return <div className={s.contact}><b>{contactTitle}:</b>{contactValue}</div>
 }
 
 export default ProfileInfo;
