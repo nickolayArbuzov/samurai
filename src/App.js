@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, BrowserRouter, HashRouter } from 'react-router-dom';
 import './App.css';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavBar from './components/NavBar/NavBar';
@@ -12,7 +12,6 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import Preloader from './components/Common/Preloader/Preloader';
 import store from './redux/reduxStore';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { withSuspense } from './hoc/WithSuspense';
 
@@ -66,11 +65,11 @@ let AppContainer = compose(
   connect(mapStateToProps, {initializeApp}))(App);
 
 const SocialNetApp = (props) => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SocialNetApp;

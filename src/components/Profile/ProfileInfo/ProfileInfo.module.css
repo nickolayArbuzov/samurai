@@ -13,3 +13,7 @@
     height: 20px;
     background-color: red;
 }
+
+.mainPhoto{
+    max-width: 200px;
+}
