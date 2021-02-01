@@ -15,15 +15,15 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
         savePhoto(e.target.files[0]);
       }
     }
-
     return (
     <div>
       <div className={s.descriptionBlock}>
-          <img src={profile.profile.photos.large || userPhoto } className={s.mainPhoto}/>
+          <img src={profile.photos.large || userPhoto } className={s.mainPhoto}/>
           { isOwner && <input type={'file'} onChange={onMainPhotoSelected}/> }
           
           <ProfileData profile={profile}/>
           <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+          
       </div>
     </div>
     )
@@ -45,7 +45,7 @@ const ProfileData = (profile) => {
           }
 
           <div>
-            <b>Contacts: </b> {Object.keys(profile.profile.contacts).map(key => {
+            <b>Contacts: </b> {profile.profile && Object.keys(profile.profile.contacts).map(key => {
               return <Contact key={key} contactTitle={key} contactValue={profile.profile.contacts[key]}/>
             })}
           </div>
