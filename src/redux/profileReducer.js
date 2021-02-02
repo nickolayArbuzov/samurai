@@ -1,4 +1,6 @@
 import { profileAPI } from '../api/api';
+import { stopSubmit } from 'redux-form';
+
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET-USER-PROFILE';
 const SET_STATUS = 'SET-STATUS';
@@ -45,7 +47,7 @@ const profileReducer = (state = initialState, action) => {
         case DELETE_POST: 
             return {
                 ...state,
-                posts: state.posts.filter(p => p.id != action.postId)
+                posts: state.posts.filter(p => p.id !== action.postId)
             }
         case SAVE_PHOTO_SUCCESS: 
             return {
@@ -83,11 +85,21 @@ export const savePhoto = (file) => async (dispatch) => {
         dispatch(savePhotoSuccess(response.data.data.photos));
     }
 }
-export const saveProfile = (profile) => async (dispatch) => {
+export const saveProfile = (profile) => async (dispatch, getState) => {
+    const userId = getState().auth.userId;
     let response = await profileAPI.saveProfile(profile)
-    debugger
     if (response.data.resultCode === 0){
-        dispatch(savePhotoSuccess(response.data.data.photos));
+        dispatch(getUserProfile(userId));
+    } else{
+        let errorObject = (response.data.messages[0].slice(response.data.messages[0].indexOf('(')+1,response.data.messages[0].indexOf('-'))).toLowerCase();
+        let errorMessage = (response.data.messages[0].slice(response.data.messages[0].indexOf('>')+1,response.data.messages[0].indexOf(')'))).toLowerCase();
+        dispatch(
+            stopSubmit(
+                'edit-profile', 
+                //{'contacts': {'facebook': response.data.messages[0]}}
+                {errorObject: {errorMessage: response.data.messages[0]}}
+            )
+        );
     }
 }
 
