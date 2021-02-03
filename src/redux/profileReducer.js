@@ -100,6 +100,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
                 {errorObject: {errorMessage: response.data.messages[0]}}
             )
         );
+        return Promise.reject(response.data.messages[0]);
     }
 }
 
