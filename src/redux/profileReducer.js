@@ -91,8 +91,18 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
     if (response.data.resultCode === 0){
         dispatch(getUserProfile(userId));
     } else{
-        let errorObject = (response.data.messages[0].slice(response.data.messages[0].indexOf('(')+1,response.data.messages[0].indexOf('-'))).toLowerCase();
-        let errorMessage = (response.data.messages[0].slice(response.data.messages[0].indexOf('>')+1,response.data.messages[0].indexOf(')'))).toLowerCase();
+        let errorObject = (response.data.messages[0]
+                        .slice(
+                            response.data.messages[0].indexOf('(')+1,
+                            response.data.messages[0].indexOf('-'))
+                        )
+                        .toLowerCase();
+        let errorMessage = (response.data.messages[0]
+                        .slice(
+                            response.data.messages[0].indexOf('>')+1,
+                            response.data.messages[0].indexOf(')'))
+                        )
+                        .toLowerCase();
         dispatch(
             stopSubmit(
                 'edit-profile', 
